@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- TODO: favicon > -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/global.css" rel="stylesheet" type="text/css" />
+    <style>
+        .zeisslogo {
+            height: 100px;
+            padding-left: 10px;
+        }
+
+        .infylogo {
+            height: 45px;
+        }
+
+        .logo {
+            color: #999999;
+        }
+
+        .float-right {
+            float: right;
+            margin-top: -60px;
+        }
+
+        .container {
+            padding: 10px 10px 10px 10px;
+        }
+
+        .footer {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="logo">
+                <img alt="Zeiss Logo" src="https://raw.githubusercontent.com/gouthamb/B2CLogin/master/images/zeisslogo.png" class="zeisslogo" />
+                <br />
+                <span>Global Corporate Site | Login</span>
+                <!-- <img alt="Zeiss Logo" class="login-logo" src="http://localhost/wingtip/images/logo.png" /> -->
+            </div>
+            <div class="float-right">
+                <span>
+                    English | Deutsch | Espanol | Contact | <a href="#">Logout</a>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h3 class="logo">User Menu</h3>
+                <img src="C:\ZEISS Orals\PagesModified\PagesModified\DashboardImages\userMenu.png" />
+            </div>
+            <div class="col-md-4">
+                <h3 class="logo">My Dashboard</h3>
+                <img src="C:\ZEISS Orals\PagesModified\PagesModified\DashboardImages\MyDashboard.png" />
+            </div>
+            <div class="col-md-5">
+                <h4 class="logo">Newest Documents</h4>
+                <img src="C:\ZEISS Orals\PagesModified\PagesModified\DashboardImages\NewestDoc.png" />
+            </div>
+        </div>
+        <div class="footer">
+            <div align="center" class="logo">
+                <p>User Registration Demo Application developed by</p>
+                <img alt="Infy Logo" src="https://raw.githubusercontent.com/gouthamb/B2CLogin/master/images/infylogo.png" class="infylogo" />
+                <!-- <img alt="Zeiss Logo" class="login-logo" src="http://localhost/wingtip/images/logo.png" /> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    var url = window.location.href;
+    var token = url.split("id_token");
+    document.getElementById("token_value").innerHTML = token(1);
+</script>
