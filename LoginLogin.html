@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign in</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- TODO: favicon > -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/global.css" rel="stylesheet" type="text/css" />
+    <style>
+        label {
+            display: inline-block;
+            width: 150px;
+        }
+
+        input {
+            display: inline-block;
+            width: 300px;
+            border: solid 1px #dcdcdc;
+        }
+
+            input.focus, input:focus {
+                border: solid 1px #cccccc;
+                box-shadow: 0 0 5px 1px #cccccc;
+            }
+
+        .entry {
+            padding: 0px 320px;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 0px 20px;
+        }
+
+        .divider, .create {
+            text-align: center;
+        }
+
+        .buttons {
+            text-align: center;
+            padding-top: 20px;
+            margin-right: 45px;
+        }
+
+
+        .zeisslogo {
+            height: 100px;
+            padding-left: 10px;
+        }
+
+        .infylogo {
+            height: 45px;
+        }
+
+        .logo {
+            color: #999999;
+        }
+
+        .float-right {
+            float: right;
+            margin-top: -60px;
+        }
+
+        .container {
+            padding: 10px 10px 10px 10px;
+        }
+
+        .footer {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .entry-item {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="logo">
+                <img alt="Zeiss Logo" src="https://raw.githubusercontent.com/gouthamb/B2CLogin/master/images/zeisslogo.png" class="zeisslogo" />
+                <br />
+                <span>Global Corporate Site | Login</span>
+                <!-- <img alt="Zeiss Logo" class="login-logo" src="http://localhost/wingtip/images/logo.png" /> -->
+            </div>
+            <div class="float-right">
+                <span>
+                    English | Deutsch | Espanol | Contact | <a href="#">Logout</a>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div id="api" data-name="Unified">
+                <!--CORS Content will be auto injected by Azure. For content reference to implement css, refer CORS_Content.html-->
+                <div class="localAccount" role="form">
+                    <div class="intro">
+                        <h3>Sign in with your existing account</h3>
+                    </div>
+                    <div class="error pageLevel" aria-hidden="true" style="display: none;">
+                        <p role="alert"></p>
+                    </div>
+                    <div class="entry">
+
+                        <div class="row entry-item">
+                            <div class="col-md-12">
+                                <label for="logonIdentifier">Email Address</label>
+                                <div class="error itemLevel" aria-hidden="true" style="display: none;">
+                                    <p role="alert"></p>
+                                </div>
+                                <input type="email" id="logonIdentifier" name="LogonIdentifier" pattern="^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" placeholder="LogonIdentifier" value="" tabindex="1">
+                            </div>
+                        </div>
+
+                        <div class="row entry-item">
+                            <div class="col-md-12">
+                                <label for="password">Password</label><a id="forgotPassword" tabindex="2">Forgot your password?</a>
+                                <div class="error itemLevel" aria-hidden="true" style="display: none;">
+                                    <p role="alert"></p>
+                                </div>
+                                <input type="password" id="password" name="Password" placeholder="Password" tabindex="2">
+                            </div>
+                        </div>
+                        <div class="working"></div>
+                        <div class="buttons"> <button id="next" tabindex="3">Sign in</button> </div>
+
+                    </div>
+                    <div class="buttons">
+                        <h3>OR</h3>
+                    </div>
+                    <div class="create">
+                        <p>Don't have an account?<a id="createAccount" tabindex="4">Sign up now</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div align="center" class="logo">
+                <p>User Registration Demo Application developed by</p>
+                <img alt="Infy Logo" src="https://raw.githubusercontent.com/gouthamb/B2CLogin/master/images/infylogo.png" class="infylogo" />
+                <!-- <img alt="Zeiss Logo" class="login-logo" src="http://localhost/wingtip/images/logo.png" /> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
